@@ -1,11 +1,7 @@
-const validator = require("validator");
+console.log("1");
 
-const validateEmail = (email) => {
-  return validator.isEmail(email);
-};
+setTimeout(() => {
+  console.log("2");
+}, 2000);
 
-console.log("First email check: ");
-console.log(validateEmail("bielecki.biz@gmail.com"));
-
-console.log("Second email check: ");
-console.log(validateEmail("bielecki.bizgmail.com"));
+console.log("3");

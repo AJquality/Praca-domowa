@@ -22,10 +22,6 @@ try {
   console.log(error.message);
 }
 
-// przesylka2.waga = 20;
-// przesylka.name = "List";
-// przesylka2.name = "Paczka";
-
 function mojaFunkcja(id) {
   const element = document.getElementById("id01");
   const element2 = document.getElementById("id02");
