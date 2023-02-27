@@ -5,18 +5,26 @@ function myFunction() {
 
 function myColorChange() {
   const element = document.getElementById("id01");
-  element.style.background = "red";
+  element.style.color = "red";
 }
 
-class Przesylka {
-  constructor(name, waga) {
-    this.name = name;
-    this.waga = waga;
-  }
+let przesylka = {};
+let przesylka2 = {};
+
+const przesylkaJSON = '{"name":"List,"ulica":""}';
+const przesylka2JSON = '{"name":"Paczka","ulica":"","waga":20}';
+
+try {
+  przesylka = JSON.parse(przesylkaJSON);
+  przesylka2 = JSON.parse(przesylka2JSON);
+} catch (error) {
+  console.log(error.name);
+  console.log(error.message);
 }
 
-let przesylka = new Przesylka("List", "");
-let przesylka2 = new Przesylka("Paczka", 20);
+// przesylka2.waga = 20;
+// przesylka.name = "List";
+// przesylka2.name = "Paczka";
 
 function mojaFunkcja(id) {
   const element = document.getElementById("id01");
@@ -40,3 +48,14 @@ function mojaFunkcja(id) {
     element2.innerHTML = informacja;
   }
 }
+
+const jsonPaczka = JSON.stringify(przesylka);
+
+console.log(jsonPaczka);
+
+const json = '{"name":"Mango","age":3,"isHappy":true}';
+
+const pies2 = JSON.parse(json);
+console.log(pies2);
+
+console.log(pies2.name);
